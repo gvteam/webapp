@@ -20,12 +20,6 @@ pipeline {
         sh 'cat trufflehog'
       }
     }
-
-		stage('Build') {
-			steps {
-			sh 'mvn clean package'
-			}
-		}
 		stage ('Source-Composition-Analysis') {
 		steps {
 		     sh 'rm owasp-* || true'
@@ -35,6 +29,12 @@ pipeline {
 		     sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
 		}
 	}
+
+		stage('Build') {
+			steps {
+			sh 'mvn clean package'
+			}
+		}
 		
 		stage ('Deploy-To-Tomcat') {
             steps {
