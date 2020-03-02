@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Devsecops test version</title>
+    <title>Devsecops testing</title>
 
 
     <!-- Custom styles for this template -->
